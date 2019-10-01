@@ -8,11 +8,23 @@ body, html {
 	height: 100% !important;
 }
 h2 {
-	margin: 0 0 20px 0;
+	margin: 0px 0 40px 0;
 	font-weight: 500;
 	font-size: 34px;
 	color: #333;
 	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 16px;
+}
+h2::after {
+	position: absolute;
+	content: "";
+	background: #08a161;
+	height: 2px;
+	width: 80px;
+	bottom: 0;
+	margin-left: -40px;
+	left: 50%;
 }
 h3 {
 	font-size: 22px;
@@ -38,11 +50,11 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: #8eb640;
+	color: #08a161;
 }
 a:hover, a:focus {
 	text-decoration: none;
-	color: #222;
+	color: #29664b;
 }
 ul, ol {
 	list-style: none;
@@ -69,15 +81,9 @@ ul, ol {
 	webkit-padding: 0;
 	moz-padding: 0;
 }
-hr {
-	height: 2px;
-	width: 70px;
-	text-align: center;
-	position: relative;
-	background: #8eb640;
-	margin: 0;
-	margin-bottom: 40px;
-	border: 0;
+#about .col-sm-6, #reservations .col-sm-6, #restaurant-menu .col-sm-6 {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -101,7 +107,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #menu a.navbar-brand {
 	font-family: 'Dancing Script', cursive;
 	font-size: 36px;
-	color: #8eb640;
+	color: #0fb84a;
 	font-weight: 700;
 	letter-spacing: 1px;
 }
@@ -116,7 +122,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin: 10px 15px 0 15px;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
-	color: #8eb640;
+	color: #068a53;
 }
 .on {
 	background-color: #262626 !important;
@@ -124,21 +130,26 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	padding: 10px 0 !important;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #8eb640 !important;
+	color: #068a53 !important;
 	background-color: transparent;
 }
 .navbar-toggle {
 	border-radius: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #8eb640;
-	border-color: #8eb640;
+	background-color: #068a53;
+	border-color: #068a53;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
 }
 .section-title {
 	margin-bottom: 70px;
+}
+.section-title h2 {
+	color: #fff;
+	font-size: 42px;
+	padding-bottom: 20px;
 }
 .section-title .overlay {
 	padding: 80px 0;
@@ -147,10 +158,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .section-title p {
 	font-size: 22px;
 	color: rgba(255,255,255,0.8);
-}
-.section-title hr {
-	margin: 0 auto;
-	margin-bottom: 40px;
 }
 .btn-custom {
 	text-transform: uppercase;
@@ -202,40 +209,47 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-size: 32px;
 	font-weight: 300;
 	margin-top: 10px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 200px;
 	text-align: center;
 }
+header .page-scroll {
+	color: white;
+	font-size: 56px;
+	padding: 30px 50px;
+}
+header .page-scroll:hover {
+	color: #ccc;
+}
 /* About Section */
 #about {
 	padding: 120px 0;
+}
+#about h2::after {
+	bottom: 0;
+	margin-left: 0;
+	left: 0;
 }
 #about h3 {
 	font-size: 20px;
 }
 #about .about-text {
-	margin-left: 10px;
+	margin-bottom: 32px;
 }
 #about .about-img {
 	display: inline-block;
 	position: relative;
+	margin-bottom: 32px;
 }
-#about .about-img:before {
-	display: block;
-	content: '';
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	bottom: 8px;
-	left: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.5);
-}
+
 #about p {
 	line-height: 24px;
-	margin: 15px 0 30px;
+	margin: 16px 0 24px;
+	text-align: justify;
+	/*max-width: 500px;*/
 }
 /* Menu Section */
 #restaurant-menu {
@@ -245,51 +259,53 @@ header .intro-text {
 	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
 }
-#restaurant-menu .section-title h2 {
-	color: #fff;
-}
-#restaurant-menu img {
-	width: 300px;
-	box-shadow: 15px 0 #a7c44c;
-}
-#restaurant-menu h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-#restaurant-menu .menu-section hr {
-	margin: 0 auto;
-}
-#restaurant-menu .menu-section {
+.menu-section .menu-section {
 	margin: 0 20px 80px;
 }
-#restaurant-menu .menu-section-title {
-	font-size: 26px;
+.menu-section .menu-section-title {
+	font-size: 32px;
 	display: block;
-	font-weight: 500;
+	font-weight: 400;
 	color: #444;
 	margin: 20px 0;
 	text-align: center;
 }
-#restaurant-menu .menu-item {
-	margin: 35px 0;
+.menu-section .menu-item {
+	margin: 45px 0;
 	font-size: 18px;
 }
-#restaurant-menu .menu-item-name {
+.menu-section .menu-item-name {
+	font-weight: 500;
+	font-size: 21px;
+	color: #333;
+	margin-bottom: 4px;
+}
+.menu-section .menu-item-description {
+	text-align: justify;
+}
+.menu-section .menu-item-description strong {
 	font-weight: 600;
-	font-size: 17px;
-	color: #555;
+}
+.menu-section .menu-item-description p {
+	font-size: inherit;
+}
+.menu-section.price-list .menu-item-name {
+	padding-bottom: 2px;
+	margin-bottom: 2px;
 	border-bottom: 2px dotted rgb(213, 213, 213);
 }
-#restaurant-menu .menu-item-description {
-	font-style: italic;
+.menu-section.price-list .menu-item-description {
 	font-size: 15px;
+	width: 90%;
 }
-#restaurant-menu .menu-item-price {
+.menu-section.price-list .menu-item-price {
+	font-size: 21px;
 	float: right;
 	font-weight: 600;
-	color: #555;
-	margin-top: -26px;
+	color: #444;
+	margin-top: -32px;
 }
+
 /* Portfolio Section */
 #portfolio {
 	padding: 0 0 120px 0;
@@ -327,11 +343,11 @@ ol.type li a {
 }
 ol.type li a.active {
 	color: #fff;
-	background-color: #8eb640;
+	background-color: #08a161;
 }
 ol.type li a:hover {
 	color: #fff;
-	background-color: #8eb640;
+	background-color: #08a161;
 }
 .isotope-item {
 	z-index: 2
@@ -371,16 +387,6 @@ ol.type li a:hover {
 	overflow: hidden;
 	position: relative;
 }
-.portfolio-item .hover-bg:before {
-	display: block;
-	content: '';
-	position: absolute;
-	top: 6px;
-	right: 6px;
-	bottom: 6px;
-	left: 6px;
-	border: 1px solid rgba(255, 255, 255, 0.6);
-}
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
@@ -412,207 +418,104 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-/* Team Section */
-#team {
+
+/* Webcams Section */
+#webcam {
 	color: #fff;
 	background: #444 url(../img/team-bg.jpg) center top no-repeat fixed;
 	background-size: cover;
+	overflow: hidden;
 }
-#team .overlay {
-	padding: 120px 0 80px 0;
+#webcam .overlay {
+	padding: 0 0 80px 0;
 	background: rgba(0, 0, 0, 0.6);
 }
-#team h2, #team p {
+#webcam h2 {
+	margin-top: 80px;
+}
+#webcam h2, #webcam p {
 	color: #fff;
 }
-#team hr {
+#webcam hr {
 	background: #fff;
 }
-#team h3 {
+#webcam h3 {
 	color: #fff;
 	font-weight: 400;
 	font-size: 20px;
 	margin: 5px 0;
 }
-#team img {
-	width: 280px;
+#meteoblue-widget {
+	width: 805px;
+	height: 524px;
+	background-color: #0006;
 }
-#team .thumbnail {
-	background: transparent;
-	border: 0;
-}
-#team .thumbnail .team-img {
-	display: inline-block;
-	position: relative;
-}
-#team .thumbnail .team-img:before {
-	display: block;
-	content: '';
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	bottom: 8px;
-	left: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-}
-#team .thumbnail .caption {
-	padding-top: 10px;
-}
-#team .thumbnail .caption p {
-	color: rgba(255,255,255,0.7);
-	padding: 0 10px;
-	font-size: 15px;
-}
-/* Call Reservation Section */
-#call-reservation {
-	padding: 90px 0;
-	color: #fff;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8eb640+50,779936+100 */
-	background: rgb(142,182,64); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', endColorstr='#779936', GradientType=0 ); /* IE6-9 */
-}
-#call-reservation .overlay {
-	padding: 80px 0;
-	background: #8eb640;
-}
-#call-reservation h2 {
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	font-weight: 400;
-	margin: 0;
-}
-#call-reservation hr {
-	background: #fff;
-}
-#call-reservation h3 {
-	color: #fff;
-	font-weight: 500;
-	font-size: 20px;
-	margin: 5px 0;
-}
-/* Contact Section */
-#contact {
+
+/* Reservations Secitions */
+#reservations {
 	padding: 100px 0 60px 0;
 	background: #F6F6F6;
 }
-#contact .section-title p {
-	color: #777;
-}
-#contact form {
-	padding: 0;
-}
-#contact h3 {
-	text-transform: uppercase;
-	font-size: 20px;
+#reservations h2.details-title {
 	font-weight: 400;
-	color: #555;
+	font-size: 32px;
 }
-#contact .text-danger {
-	color: #cc0033;
-	text-align: left;
-}
-label {
-	font-size: 12px;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
-	float: left;
-}
-#contact .form-control {
-	display: block;
-	width: 100%;
-	padding: 6px 12px;
-	font-size: 16px;
-	line-height: 1.42857143;
+#reservations .section-title h2 {
 	color: #444;
-	background-color: #fff;
-	background-image: none;
-	border: 1px solid #ddd;
-	border-radius: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	-webkit-transition: none;
-	-o-transition: none;
-	transition: none;
 }
-#contact .form-control:focus {
-	border-color: #999;
-	outline: 0;
-	-webkit-box-shadow: transparent;
-	box-shadow: transparent;
+#reservations .section-title p {
+	font-size: 24px;
+	font-weight: 500;
+	color: #333;
 }
-.form-control::-webkit-input-placeholder {
-color: #777;
+#reservations .section-title p a {
+	font-weight: 700;
+	font-size: 110%;
 }
-.form-control:-moz-placeholder {
-color: #777;
+
+#contact {
+	line-height: 0;
 }
-.form-control::-moz-placeholder {
-color: #777;
+#contact iframe {
+	width: 100%;
+	min-height: 360px;
+	height: 40vh;
 }
-.form-control:-ms-input-placeholder {
-color: #777;
-}
-#contact .contact-item {
-	margin: 20px 0 40px 0;
-}
-#contact .contact-item span {
-	font-weight: 400;
-	color: #aaa;
-	text-transform: uppercase;
-	margin-bottom: 6px;
-	display: inline-block;
-}
-#contact .contact-item p {
-	font-size: 16px;
-}
+
 /* Footer Section*/
 #footer {
 	background: #262626;
 	padding: 50px 0 0 0;
 }
 #footer h3 {
-	color: #8eb640;
+	color: #068a53;
 	font-weight: 400;
 	font-size: 18px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
+#footer .contact-item {
+	font-family: 'Open Sans', sans-serif;
+}
 #footer .copyrights {
-	padding: 20px 0;
 	margin-top: 50px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#779936+0,8eb640+50 */
-	background: rgb(119,153,54); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(119,153,54,1) 0%, rgba(142,182,64,1) 50%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(119,153,54,1) 0%, rgba(142,182,64,1) 50%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(119,153,54,1) 0%, rgba(142,182,64,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', endColorstr='#8eb640', GradientType=0 ); /* IE6-9 */
+	padding: 2em 0;
+	background-color: rgba(0,0,0,0.1);
+	font-size: 90%;
 }
-#footer .social {
-	margin: 20px 0 30px 0;
-}
-#footer .social ul li {
-	display: inline-block;
-	margin: 0 20px;
-}
-#footer .social i.fa {
-	font-size: 26px;
-	padding: 4px;
-	color: #fff;
-	transition: all 0.3s;
-}
-#footer .social i.fa:hover {
-	color: #eee;
-}
-#footer p {
+
+#footer {
 	font-size: 15px;
-	color: rgba(255,255,255,0.8)
+	color: #ccc;
 }
-#footer a {
+#footer p i.fa {
+	font-size: 120%;
+	vertical-align: baseline;
+}
+#footer a, #footer strong {
 	color: #f6f6f6;
+	font-weight: 500;
 }
 #footer a:hover {
-	color: #333;
+	color: #aaa;
 }

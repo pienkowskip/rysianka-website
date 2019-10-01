@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Touché</title>
+<title>Rysianka &mdash; Schronisko Górskie PTTK</title>
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content="Paweł Pieńkowski">
 
 <!-- Favicons
     ================================================== -->
@@ -33,6 +33,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+<script>
+    function unobfuscate(string) { return string.split('z').reverse().join(''); }
+</script>
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <!-- Navigation
@@ -42,16 +47,17 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Touché</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">Rysianka</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about" class="page-scroll">About</a></li>
-        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
-        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        <li><a href="#team" class="page-scroll">Chefs</a></li>
-        <li><a href="#call-reservation" class="page-scroll">Contact</a></li>
+        <li><a href="#about" class="page-scroll">Opisanie</a></li>
+        <li><a href="#restaurant-menu" class="page-scroll">Oferta</a></li>
+        <li><a href="#portfolio" class="page-scroll">Obrazy</a></li>
+        <li><a href="#webcam" class="page-scroll">Oglądaj</a></li>
+        <li><a href="#reservations" class="page-scroll">Odwołaj</a></li>
+        <li><a href="#contact" class="page-scroll">Oddzwonimy</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -64,9 +70,10 @@
       <div class="container">
         <div class="row">
           <div class="intro-text">
-            <h1>Touché</h1>
-            <p>Restaurant / Coffee / Pub</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a> </div>
+            <h1>Rysianka</h1>
+            <p>Schronik Górski PTTK</p>
+            <a href="#about" class="page-scroll"><i class="fa fa-arrow-circle-down"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -75,17 +82,33 @@
 <!-- About Section -->
 <div id="about">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 ">
-        <div class="about-img"><img src="img/about.jpg" class="img-responsive" alt=""></div>
-      </div>
-      <div class="col-xs-12 col-md-6">
+    <div class="row wide-gutter">
+      <div class="col-xs-12 col-sm-6">
         <div class="about-text">
-          <h2>Our Restaurant</h2>
-          <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-          <h3>Awarded Chefs</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+          <h2>Nasz schronik</h2>
+          <p>Schronik Górski "Rysianka" posiada długoletnią turystyczna tradycję, której początek można liczyć od 1937 roku.
+            Dwa budynki schroniska (Główny i Betlejemka) położone są na wysokości 1290 m n.p.m. na Hali Rysianka.
+            Jest to uroczy latem i śnieżny zimą zakątek Beskidu Żywieckiego w sąsiedztwie masywu Pilska.
+            Wiosną na rozległej hali kwitną krokusy, a wytrwali miłośnicy przyrody spotkają tutaj również wiele innych rzadkich gatunków roślin i zwierząt - na przykład głuszce.
+          </p>
+          <p>
+            Schronisko obsypane jest śniegiem od grudnia do połowy kwietnia co stwarza świetne warunki do uprawiania sportów zimowych w kameralnych warunkach i z dala od hałaśliwych tłumów.
+            Obok schroniska znajduje się góralska chata w której często odbywają się atrakcyjne imprezy, urozmaicone pieczeniem mięsiwa na ognisku, muzyką i śpiewem kapeli góralskiej.
+          </p>
+        </div>
+        <div class="about-img"><img src="img/about-history.jpg" class="img-responsive" alt=""></div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div class="about-img"><img src="img/grzybica.jpg" class="img-responsive" alt=""></div>
+        <div class="about-text">
+          <h2>Historia</h2>
+          <p>
+            Pomiędzy 1933 a 1935 rokiem Gustaw Pustelnik rozpoczął budowę domu na wydzielonej i ogrodzonej przez siebie górnej części Hali Rysianki, której był jedynie wspłówłaścicielem. Nie posiadał też stosownego zezwolenia na budowę. Powyższe fakty stały się przyczyną konfliktu zarówno z pozostałymi współwłaścicielami hali, jak i władzami administracyjnymi, które w końcu nakazały prowadzącemu nielegalną inwestycję rozebranie budynku.
+
+            Również organizacja turystyczna Beskiden-Verein, która posiadała oddalone o 10 min marszu od budowy Pustelnika schronisko na Lipowskiej, podniosła protest przeciwko tej inwestycji, mając na uwadze przyszłą konkurencję. Tatrzańskie Towarzystwo Narciarzy z Krakowa zainteresowało się nieukończonym obiektem i postanowiło pomóc jego właścicielowi. To przesądziło o pozostawieniu budynku. TTN przeznaczyło fundusze na jego wykończenie i w 1937 roku otworzyło w domu Pustelnika swoje schronisko. Obiekt zyskał nazwę: „Schronisko Towarzystwa Tatrzańskiego Narciarzy – Lipowska”, a budynek pozostawał własnością Gustawa Pustelnika.
+
+          </p>
         </div>
       </div>
     </div>
@@ -95,116 +118,141 @@
 <div id="restaurant-menu">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Menu</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      <h2>Oferta</h2>
+      <p>U nas wyśpisz się jak u kochanki, zjesz jak u teściowej i wypoczniesz jak z żoną...</p>
     </div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
-          <h2 class="menu-section-title">Breakfast & Starters</h2>
-          <hr>
+          <h2 class="menu-section-title">Oferta</h2>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Noclegi </div>
+            <div class="menu-item-description">
+              Schronisko posiada 50 miejsc noclegowych w pokojach od 2 do 10 osobowych.
+              Standard pokoi turystyczny, niektóre łóżka piętrowe.
+              W pokojach znajdują się umywalki. Toalety i przysznice wpólne, na korytarzach.
+              <br />
+              Zniżki dla członków PTTK, Alpenverein oraz aktywnych krwiodawców.
+            </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Wyżywienie </div>
+            <div class="menu-item-description">
+              W schroniskowej kuchni przygotowujemy pyszne, świeże i domowe jedzenie.
+              Oferujemy śniadania, zestawy obiadowe, a także pieczone przez nas szarlotkę i, w weekendy, drożdżówki z borówkami.
+              Przykładowe dania z naszego menu:
+              jajecznica na śniadanie za 10 zł,
+              tradycyjna kwaśnica za 10 zł,
+              jadło drwala (placek ziemniaczany z gulaszem wołowym) za 30 zł,
+              pierogi za 14 zł. Smacznego!
+              <br />
+              W schronisku funkcjonuje także bufet, w którym zamówić zimne piwo, gorącą kawę czy herbatę.
+              Możesz tam również uzupełnić zapasy słodyczy i napojów na dalszą drogę.
+              <br />
+            </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Pole namiotowe </div>
+            <div class="menu-item-description">
+              Położone w zacisznym i spokojnym miejscu. Nocleg we własnym namiocie.
+              Dwa miejsca na ognisko dostępne dla turystów, drewno należy zorganizować we własnym zakresie (przynieść z lasu).
+              Możliwość korzystania z infrastruktury schroniska m.in. toalet, pryszniców z ciepłą wodą czy wrzątku.
+              <br />
+              <br />
+              Pola namiotowego strzeże potężny kocur, czarny jak noc, wielki jak świnia.
+              Jego kły są ostre niczym brzytwa, pazury silniejsze niż u jastrzębia.
+              Jednym susem mógłby skoczyć do tchawicy i zabić na miejscu.
+              Na szczęscie ze względu na wrodzone lenistwo nie chce mu się tego robić. Ale mógłby! Mógłby, gdyby tylko chciał.
+              <br />
+              <br />
+              Strzeżcie się Ci co nie zapłacili za miejsce w namiocie!
+            </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Main Course</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Wypożyczalnia sprzętu zimowego </div>
+            <div class="menu-item-description">
+              Zimą panują bardzo dobre warunki do uprawiania sportów zimowych, w szczególnosci narciarstwa skiturowego.
+              Posiadamy 25 zestawów skiturowych (narty, foki, buty, kijki) do wypożyczenia.
+              Jeśli nigdy nie korzystałeś(aś) z takich nart, to koniecznie musisz spróbować.
+              W wypożyczalni mamy także rakiety śnieżne, które znacznie ułatwiają zimowe wędrówki.
+            </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Dinner</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $350 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Chata góralska </div>
+            <div class="menu-item-description">
+              Możliwość wynającia prawdziwej chaty góralskiej położonej nieopadal schroniska.
+              Przystosowana do organizacji spotkań i imprez, udekorowana sprzętem z epoki.
+              Chata wyposażona w palenisko (drewno w cenie), stoły i ławy (ok. 50 miejsc) oraz sprzęt nagłaśniający.
+              Istnieje możliwość przygotowania specjalnego menu biesiadnego.
+            </div>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
-          <h2 class="menu-section-title">Coffee & Drinks</h2>
-          <hr>
+          <h2 class="menu-section-title">Godziny otwarcia</h2>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Godziny działania kuchni (wydawania posiłków): </div>
+            <div class="menu-item-description"><strong>8:00&ndash;19:00 (w niedzielę do 18:00)</strong></div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Godziny otwarcia bufetu oraz recepcji: </div>
+            <div class="menu-item-description"><strong>8:00&ndash;19:00 (w sobotę do 20:30)</strong></div>
+          </div>
+        </div>
+        <div class="menu-section price-list">
+          <h2 class="menu-section-title">Cennik</h2>
+          <div class="menu-item">
+            <div class="menu-item-name"> Pokój jednoosobowy </div>
+            <div class="menu-item-price"> 80 zł </div>
+            <div class="menu-item-description"> Cena za osobę. </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Pokój 2 osobowy </div>
+            <div class="menu-item-price"> 50 zł</div>
+            <div class="menu-item-description"> Cena za osobę. </div>
           </div>
           <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+            <div class="menu-item-name"> Pokój 3 osobowy </div>
+            <div class="menu-item-price"> 45 zł </div>
+            <div class="menu-item-description"> Cena za osobę. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Pokój 5-6 osobowy </div>
+            <div class="menu-item-price"> 38 zł</div>
+            <div class="menu-item-description"> Cena za osobę. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Pokój 8-10 osobowy </div>
+            <div class="menu-item-price"> 35 zł</div>
+            <div class="menu-item-description"> Cena za osobę. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Komplet pościeli </div>
+            <div class="menu-item-price"> 10 zł</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Nocleg we własnym namiocie </div>
+            <div class="menu-item-price"> 15 zł</div>
+            <div class="menu-item-description">
+              Cena za osobę.
+              Obejmuje korzystanie z infrastruktury schroniska m.in. toalet, pryszniców z ciepłą wodą czy wrzątku.
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Sauna </div>
+            <div class="menu-item-price"> 60 zł</div>
+            <div class="menu-item-description"> Cena za jedną godzinę użytkowania. W saunie komfortowo mieszczą się 4 osoby. Chęć skorzystania z sauny należy zgłosić obsłudze przynajmniej godzinę wcześniej. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Wynajęcie chaty góralskiej </div>
+            <div class="menu-item-price"> 200 - 300 zł </div>
+            <div class="menu-item-description">
+              Chata na spotkania i imprezy. Wyposażona w palenisko, stoły i ławy (ok. 50 miejsc) oraz sprzęt nagłaśniający.
+              W cenie drewno na ognisko. Nocleg i wyżywienie płatne osobno.
+            </div>
           </div>
         </div>
       </div>
@@ -215,9 +263,8 @@
 <div id="portfolio">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Gallery</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      <h2>Galeria</h2>
+      <p>Obraz bywa wart więcej niż tysiąc słów, zatem...</p>
     </div>
   </div>
   <div class="container">
@@ -226,10 +273,10 @@
         <ul class="cat">
           <li>
             <ol class="type">
-              <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
+              <li><a href="#" data-filter="*" class="active">Wszystkie</a></li>
+              <li><a href="#" data-filter=".breakfast">Schronisko</a></li>
+              <li><a href="#" data-filter=".lunch">Krajobrazy</a></li>
+              <li><a href="#" data-filter=".dinner">Atrakcje</a></li>
             </ol>
           </li>
         </ul>
@@ -319,153 +366,191 @@
               <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- Team Section -->
-<div id="team" class="text-center">
+<div id="webcam" class="text-center">
   <div class="overlay">
     <div class="container">
       <div class="col-md-10 col-md-offset-1 section-title">
-        <h2>Meet Our Chefs</h2>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
+        <h2>Kamery</h2>
+        <p>Sprawdź na naszych kamerach aktualne warunki w górach</p>
       </div>
-      <div id="row">
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/01.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Mike Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://stream.arkomnet.eu/rysianka1/embed.html" frameborder="0" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
           </div>
+          <h3>Widok sprzed schroniska (na południowy-wschód)</h3>
         </div>
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Chris Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
+        <div class="col-md-6">
+          <div style="position:relative;padding-top:56.25%;">
+            <iframe src="https://stream.arkomnet.eu/rysianka2/embed.html" frameborder="0" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
           </div>
+          <h3>Widok w stronę Żywca (na północny-zachód)</h3>
         </div>
-        <div class="col-md-4 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
-            <div class="caption">
-              <h3>Ethan Doe</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
-            </div>
-          </div>
-        </div>
+      </div>
+
+      <div class="col-md-10 col-md-offset-1 section-title">
+        <h2>Prognoza pogody</h2>
+        <p>Sprawdź sobie prognozę sam i nie pytaj więcej</p>
+      </div>
+
+      <div class="row">
+        <iframe id="meteoblue-widget" src="https://www.meteoblue.com/en/weather/widget/three/rysianka_poland_7701459?geoloc=fixed&nocurrent=0&nocurrent=1&noforecast=0&days=7&layout=dark&location_url=https%3A%2F%2Fwww.meteoblue.com%2Fen%2Fweather%2Fwidget%2Fthree%2Frysianka_poland_7701459&location_mainUrl=https%3A%2F%2Fwww.meteoblue.com%2Fen%2Fweather%2Fweek%2Frysianka_poland_7701459&nolocation_url=https%3A%2F%2Fwww.meteoblue.com%2Fen%2Fweather%2Fwidget%2Fthree&nolocation_mainUrl=https%3A%2F%2Fwww.meteoblue.com%2Fen%2Fweather%2Fweek%2Findex&dailywidth=115&tracking=%3Futm_source%3Dweather_widget%26utm_medium%3Dlinkus%26utm_content%3Dthree%26utm_campaign%3DWeather%252BWidget"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" ></iframe>
       </div>
     </div>
   </div>
 </div>
-<!-- Call Reservation Section -->
-<div id="call-reservation" class="text-center">
+<!-- Reservation Section -->
+<div id="reservations">
   <div class="container">
-    <h2>Want to make a reservation? Call <strong>1-887-654-3210</strong></h2>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 section-title text-center">
+        <h2>Chcesz zarezerwować nocleg?</h2>
+        <p>
+          Napisz pod adres
+          <script>
+              document.write('<a rel="nofollow" href="' + unobfuscate('lzpz.ztzeznzoz@zazkznzazizszyzrz:zoztzlzizazm') + '">' + unobfuscate('lzpz.ztzeznzoz@zazkznzazizszyzr') + '</a>');
+          </script>
+          <br />
+          albo zadzwoń pod numer <a rel="nofollow" href="tel:+48338612349">(+48) 33 861 23 49</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Ważne kwestie</h2>
+          <div class="menu-item">
+            <div class="menu-item-name"> Zadatek </div>
+            <div class="menu-item-description">
+              <p>
+                Potwierdzeniem rezerwacji jest wpłacanie zadatku na konto schroniska.
+                <strong>Wysokość zadatku wynosi 20 zł za osobę na 1 dobę pobytu.</strong>
+              </p>
+              <p>
+                Numer konta do wpłat:
+                <br />
+                <strong>82 1140 2017 0000 4602 1195 0542</strong> (mBank)
+              </p>
+              <p>
+                W tytule przelewu prosimy podać datę zarezerwowanego noclego oraz nazwisko.
+                W przypadku braku wpłaty zadatku zastrzegamy sobie prawo do usunięcia rezerwacji.
+              </p>
+              <p>
+                <i>
+                  Ponadto jesteśmy zmuszeni zamieścić informację dla mniej ogarniętych.
+                  Zadatek z racji swojej natury (patrz Kodeks Cywilny) nie podlega zwrotowi w przypadku
+                  zrezygnowania z (anulowania) rezerwacji albo nie skorzystania z noclegu.</i>
+              </p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Doba noclegowa i odbiór rezerwacji </div>
+            <div class="menu-item-description">
+              <p>
+                <strong>Dobra noclegowa kończy się o godzinie 10:00.</strong>
+                W pokojach można się meldować jak tylko skończymy w nich sprzątać, czyli około godziny 13.
+              </p>
+              <p>
+                Rezerwacje odbiera się w recepcji schroniska (wspólna z bufetem).
+                <strong>Rezerwacje należy odebrać do godziny 18:00,
+                  po godzinie 18:00 niewykorzystana rezerwacja ulega anulowaniu.</strong>
+                Przybycie w późniejszych godzinach trzeba koniecznie uzgodnić telefonicznie.
+              </p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Regulacje przeciwpożarowe </div>
+            <div class="menu-item-description">
+              Schronisko jest budynkiem drewnianym.
+              Mając to na względzie wprowadzamy <strong>całkowity zakaz używania otwartego ognia, palenia tytoniu,
+              a także zakaz używania grzałek, tosterów, czajników i tym podobnych urządzeń</strong>.
+              Pomieszczenia są wyposażone w czujki pożarowe.
+              Kara za nieuzasadnione uruchomienie alarmu wynosi 500 zł.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Przydatne informacje</h2>
+          <div class="menu-item">
+            <img src="img/jelen.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Przyjmowanie rezerwacji telefonicznych: </div>
+            <div class="menu-item-description">
+              <strong>8:00&ndash;19:00 (codziennie)</strong>
+              <br />
+              Prosimy mieć na uwadze, że w czasie wzmożonego ruchu turystycznego
+              możemy nie mieć możliwości odebrania telefonu.
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Godziny otwarcia bufetu oraz recepcji: </div>
+            <div class="menu-item-description"><strong>8:00&ndash;19:00 (w sobotę do 20:30)</strong></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name"> Godziny działania kuchni (wydawania posiłków): </div>
+            <div class="menu-item-description"><strong>8:00&ndash;19:00 (w niedzielę do 18:00)</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <!-- Contact Section -->
-<div id="contact" class="text-center">
-  <div class="container">
-    <div class="section-title text-center">
-      <h2>Contact Form</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
-    </div>
-    <div class="col-md-10 col-md-offset-1">
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-      </form>
-    </div>
-  </div>
+<div id="contact">
+  <!--<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJx0kPtDwyFEcR57PxbTW-1e0&key=AIzaSyBSdxAUbDhsm8g1uhkPB6eaOtjXMLoRZgw" allowfullscreen></iframe>-->
+  <iframe src="https://maps.google.com/maps?q=schronisko%20rysianka&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </div>
 <div id="footer">
   <div class="container text-center">
     <div class="col-md-4">
-      <h3>Address</h3>
+      <h3>Adres</h3>
       <div class="contact-item">
-        <p>4321 California St,</p>
-        <p>San Francisco, CA 12345</p>
+        <p><strong>Schronisko Górskie PTTK "Rysianka"</strong></p>
+        <p><strong>Złatna, 34-371 Ujsoły</strong></p>
+        <p>NIP: 553-149-83-89</p>
       </div>
     </div>
     <div class="col-md-4">
-      <h3>Opening Hours</h3>
+      <h3>Godziny otwarcia</h3>
       <div class="contact-item">
-        <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
-        <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+        <p>niedziela&ndash;piątek: <strong>8:00 &ndash; 19:00</strong></p>
+        <p>sobota: <strong>8:00 &ndash; 20:30</strong></p>
       </div>
     </div>
     <div class="col-md-4">
-      <h3>Contact Info</h3>
+      <h3>Informacje kontaktowe</h3>
       <div class="contact-item">
-        <p>Phone: +1 123 456 1234</p>
-        <p>Email: info@company.com</p>
+        <p>
+          <i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="tel:+48338612349">(+48) 33 861 23 49</a>
+<!--
+          <script>
+              document.write('<i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="' + unobfuscate('9z4z3z2z1z6z8z3z3z8z4z+z:zlzezt') + '">' + unobfuscate('9z4z z3z2z z1z6z8z z3z3z z)z8z4z+z(') + '</a>');
+          </script>
+-->
+        </p>
+        <p>
+          <script>
+            document.write('<i class="fa fa-envelope-o"></i>&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="' + unobfuscate('lzpz.ztzeznzoz@zazkznzazizszyzrz:zoztzlzizazm') + '">' + unobfuscate('lzpz.ztzeznzoz@zazkznzazizszyzr') + '</a>');
+          </script>
+        </p>
+        <p><i class="fa fa-facebook"></i>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/Rysianka/">Schronisko Górskie PTTK Rysianka</a></p>
+        <p><i class="fa fa-bank"></i>&nbsp;&nbsp;&nbsp;<a>82 1140 2017 0000 4602 1195 0542</a></p>
       </div>
     </div>
   </div>
-  <div class="container-fluid text-center copyrights">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="social">
-        <ul>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        </ul>
-      </div>
-      <p>&copy; 2016 Touché. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
-    </div>
+  <div class="text-center copyrights">
+    Copyright &copy; 2019 Paweł Pieńkowski. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a>
   </div>
 </div>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
