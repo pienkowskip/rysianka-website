@@ -7,6 +7,9 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+body {
+	min-width: 240px;
+}
 h2 {
 	margin: 0px 0 40px 0;
 	font-weight: 500;
@@ -195,7 +198,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro h1 {
 	font-family: 'Dancing Script', cursive;
 	color: #fff;
-	font-size: 10em;
+	font-size: 140px;
 	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -445,6 +448,10 @@ ol.type li a:hover {
 	font-size: 20px;
 	margin: 5px 0;
 }
+.meteo-widget-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
 #meteoblue-widget {
 	width: 805px;
 	height: 524px;
@@ -518,4 +525,96 @@ ol.type li a:hover {
 }
 #footer a:hover {
 	color: #aaa;
+}
+
+@media (max-width: 767px) {
+	.intro h1 {
+		font-size: 112px; /* 140px */
+	}
+	.intro p {
+		font-size: 26px; /* 32px */
+	}
+	header .page-scroll {
+		font-size: 45px; /* 56px */
+	}
+	h2 {
+		font-size: 27px; /* 34px */
+	}
+	.section-title h2 {
+		font-size: 34px; /* 42px */
+	}
+	.section-title p {
+		font-size: 18px; /* 22px */
+	}
+	.menu-section .menu-section-title {
+		font-size: 26px; /* 32px */
+	}
+	.menu-section .menu-item-name {
+		font-size: 18px; /* 21px */
+	}
+	.menu-section.price-list .menu-item-price {
+		font-size: 18px; /* 21px */
+	}
+	#webcam h3 {
+		font-size: 18px; /* 20px */
+	}
+	#reservations .section-title p {
+		font-size: 19px; /* 24px */
+	}
+}
+
+@media (max-width: 383px) {
+	#menu {
+		padding: 15px;
+	}
+	#menu a.navbar-brand {
+		font-size: 32px; /* 36px */
+	}
+	.intro h1 {
+		font-size: 56px; /* 140px */
+		font-size: calc(56px + 4vw);
+	}
+	.intro p {
+		font-size: 18px; /* 32px */
+		font-size: calc(18px + 2vw);
+		overflow-wrap: break-word;
+	}
+	header .page-scroll {
+		font-size: 34px; /* 56px */
+	}
+	h2 {
+		font-size: 18px; /* 34px */
+		font-size: calc(18px + 2vw);
+		overflow-wrap: break-word;
+	}
+	.section-title h2 {
+		font-size: 18px; /* 42px */
+		font-size: calc(18px + 4vw);
+		overflow-wrap: break-word;
+	}
+	.section-title p {
+		font-size: 18px; /* 22px */
+		overflow-wrap: break-word;
+	}
+	.menu-section .menu-section-title {
+		font-size: 18px; /* 32px */
+		font-size: calc(18px + 2vw);
+		overflow-wrap: break-word;
+	}
+	.menu-section .menu-item-name {
+		font-size: 18px; /* 21px */
+		overflow-wrap: break-word;
+	}
+	.menu-section.price-list .menu-item-price {
+		font-size: 18px; /* 21px */
+		overflow-wrap: break-word;
+	}
+	#webcam h3 {
+		font-size: 18px; /* 20px */
+		overflow-wrap: break-word;
+	}
+	#reservations .section-title p {
+		font-size: 18px; /* 24px */
+		overflow-wrap: break-word;
+	}
 }
