@@ -451,11 +451,17 @@ ol.type li a:hover {
 .meteo-widget-wrapper {
     width: 100%;
     overflow-x: auto;
-}
-#meteoblue-widget {
-	width: 805px;
-	height: 524px;
+	padding: 0 8px;
 	background-color: #0006;
+}
+.meteoblue-widget.large-widget {
+	width: 805px;
+	height: 494px;
+}
+.meteoblue-widget.small-widget {
+	width: 460px;
+	height: 467px;
+	display: none;
 }
 
 /* Reservations Secitions */

@@ -27,7 +27,8 @@ function main() {
             $('.navbar-default').removeClass('on');
         }
     };
-    $(window).bind('scroll', onScroll).load(onScroll);
+    $(window).bind('scroll', onScroll);
+    $(document).ready(onScroll);
 
     $('body').scrollspy({ 
         target: '.navbar-default',
@@ -73,7 +74,22 @@ function main() {
     $(window).resize(function() {
         $isotope_container.isotope();
     });
-	
+
+    // Meteoblue widget resizing (4 or 7 days forecast)
+    var resizeMeteoblue = function () {
+
+        if ($('.meteo-widget-wrapper').width() < 805) {
+            $('.meteoblue-widget.small-widget').show();
+            $('.meteoblue-widget.large-widget').hide();
+        }
+        else {
+            $('.meteoblue-widget.small-widget').hide();
+            $('.meteoblue-widget.large-widget').show();
+        }
+    };
+    $(document).ready(resizeMeteoblue);
+    $(window).resize(resizeMeteoblue);
+
     // Nivo Lightbox 
     $('.portfolio-item a').nivoLightbox({
             effect: 'slideDown',  
