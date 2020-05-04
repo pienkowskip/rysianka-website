@@ -219,6 +219,14 @@ header .intro-text {
 	padding-bottom: 200px;
 	text-align: center;
 }
+header .logo {
+	width: 125px;
+	height: 190px;
+	margin: 0 16px;
+	position: absolute;
+	left: 0;
+	top: 80px;
+}
 header .page-scroll {
 	color: white;
 	font-size: 56px;
@@ -533,6 +541,13 @@ ol.type li a:hover {
 	color: #aaa;
 }
 
+@media (max-width: 991px) {
+	header .logo {
+		position: static;
+		float: left;
+		margin-top: 16px;
+	}
+}
 @media (max-width: 767px) {
 	.intro h1 {
 		font-size: 112px; /* 140px */
@@ -542,6 +557,17 @@ ol.type li a:hover {
 	}
 	header .page-scroll {
 		font-size: 45px; /* 56px */
+	}
+	header .logo {
+		width: 100px;
+		height: 152px;
+		float: none;
+		position: absolute;
+		right: 0;
+		bottom: 0px;
+		top: auto;
+		left: auto;
+		margin: 24px;
 	}
 	h2 {
 		font-size: 27px; /* 34px */
@@ -587,6 +613,11 @@ ol.type li a:hover {
 	}
 	header .page-scroll {
 		font-size: 34px; /* 56px */
+	}
+	header .logo {
+		margin: 16px;
+		width: 75px;
+		height: 114px;
 	}
 	h2 {
 		font-size: 18px; /* 34px */
